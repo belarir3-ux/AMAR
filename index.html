@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مكتبة بلعرير - صفحة هبوط</title>
+    <title>مكتبة بلعرير - معلومات الاتصال</title>
+    <!-- Tailwind CSS CDN for easy styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for modern typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0x0zJj/iU+sJz4+h8z7a/o6e0U4lR5G9+d4o+0gTz5Fz5L5/t2/t3/t4/t5/t6/t7/t8/t9/t0/t1/t2/t3/t4/t5/t6/t7/t8/t9/t0=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0x0zJj/iU+sJz4+h8z7a/o6e0U4lR5G9+d4o+0gTz5Fz5L5/t2/t3/t4/t5/t6/t7/t8/t9/t0=" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -16,87 +19,235 @@
             scroll-behavior: smooth;
         }
         /* Custom animations for entry effects */
-        @keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -20px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 20px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -20px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 20px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
         .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
         .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-        .hero-bg {
-            background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/23/library-1867160_1280.jpg'); /* You can replace this URL with your own image */
+        /* Updated hero background to use the uploaded image */
+        .hero-bg-contact {
+            background-image: url('photo_1_2025-08-13_13-51-35.jpg'); /* Using the uploaded image */
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 text-gray-800">
 
-    <header class="bg-blue-800 text-white shadow-lg py-4 w-full">
-        <nav class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-            <a href="#hero" class="text-3xl font-extrabold mb-4 md:mb-0 hover:text-blue-200 transition-colors duration-300 rounded-lg p-2">
-                مكتبة بلعرير
+    <!-- Header Section -->
+    <header class="bg-blue-800 text-white shadow-lg py-3 w-full">
+        <nav class="container mx-auto flex flex-col md:flex-row items-center justify-between px-3">
+            <a href="#hero" class="flex items-center gap-2 text-2xl font-extrabold mb-3 md:mb-0 hover:text-blue-200 transition-colors duration-300 rounded-lg p-1">
+                <!-- Logo for small screens -->
+                <img src="photo_2025-08-13_13-32-47.jpg" alt="مكتبة بلعرير شعار" class="h-10 md:hidden"> <!-- Show on small, hide on medium+ -->
+                <!-- Text for medium and larger screens -->
+                <span class="hidden md:block">مكتبة بلعرير</span> <!-- Hide on small, show on medium+ -->
             </a>
-            <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg font-medium">
-                <li><a href="#hero" class="hover:text-blue-200 transition-colors duration-300 pb-1 border-b-2 border-transparent hover:border-blue-200">الرئيسية</a></li>
-                <li><a href="#contact" class="hover:text-blue-200 transition-colors duration-300 pb-1 border-b-2 border-transparent hover:border-blue-200">اتصل بنا</a></li>
+            <ul class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-base font-medium">
+                <li><a href="#hero" class="hover:text-blue-200 transition-colors duration-300 pb-0.5 border-b-2 border-transparent hover:border-blue-200">الرئيسية</a></li>
+                <li><a href="#contact" class="hover:text-blue-200 transition-colors duration-300 pb-0.5 border-b-2 border-transparent hover:border-blue-200">اتصل بنا</a></li>
+                <li><a href="#services" class="hover:text-blue-200 transition-colors duration-300 pb-0.5 border-b-2 border-transparent hover:border-blue-200">خدماتنا</a></li>
+                <li><a href="#e-services" class="hover:text-blue-200 transition-colors duration-300 pb-0.5 border-b-2 border-transparent hover:border-blue-200">خدماتنا الإلكترونية</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero" class="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-24 flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 hero-bg bg-cover bg-center opacity-30"></div>
-        <div class="relative z-10 px-4 max-w-3xl">
-            <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-16 flex items-center justify-center text-center overflow-hidden">
+        <!-- Using the uploaded image as background -->
+        <div class="absolute inset-0 hero-bg-contact bg-cover bg-center opacity-70"></div>
+        <div class="relative z-10 px-3 max-w-2xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 animate-fade-in-down">
                 مرحباً بكم في <span class="text-yellow-300">مكتبة بلعرير</span>
             </h2>
-            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">
-                بوابة المعرفة والأدوات المدرسية. نوفر لك كل ما تحتاجه للتعلم والنجاح!
+            <p class="text-lg md:text-xl mb-6 animate-fade-in-up">
+                مرحباً بكم في مكتبتكم التي تجمع بين المعرفة والخدمات المتميزة، لنخدمكم بسرعة ودقة
             </p>
-            <a href="#contact" class="inline-block bg-white text-blue-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition-transform transform hover:scale-105 duration-300 ease-in-out">
-                تواصل معنا الآن
+            <a href="#e-services" class="inline-block bg-white text-blue-800 font-bold py-2 px-6 rounded-full shadow-lg hover:bg-blue-100 transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                اكتشف خدماتنا الإلكترونية
             </a>
         </div>
     </section>
 
-    <main class="flex-grow flex items-center justify-center p-4">
-        <section id="contact" class="flex flex-col w-full max-w-4xl bg-white p-8 sm:p-10 md:p-12 lg:p-16 rounded-3xl shadow-2xl text-center space-y-6 transform transition-all duration-300 hover:scale-[1.02]">
-            <h3 class="text-4xl font-bold text-center text-blue-700 mb-8">اتصل بنا</h3>
-            <p class="text-lg sm:text-xl text-gray-700">
+    <!-- Main Content - Contact Section -->
+    <main class="flex-grow flex items-center justify-center p-3">
+        <section id="contact" class="flex flex-col w-full max-w-3xl bg-white p-6 rounded-2xl shadow-xl space-y-4 transform transition-all duration-300 hover:scale-[1.01]">
+            <!-- Text alignment remains right as per previous request -->
+            <h3 class="text-3xl font-bold text-right text-blue-700 mb-6">معلومات الاتصال</h3>
+            <p class="text-base sm:text-lg text-right text-gray-700">
                 يسعدنا تواصلكم معنا عبر أي وسيلة تناسبكم:
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            <!-- Contact Buttons Grid - Changed to 2 columns on medium screens and above -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-6">
+                <!-- Facebook -->
                 <a href="https://www.facebook.com/share/16n8Utr2QZ/" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center justify-center p-4 rounded-xl bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
-                    <i class="fab fa-facebook-f text-xl ml-3"></i>
-                    <span class="text-lg font-semibold">صفحتنا على فيسبوك</span>
+                   class="flex items-center justify-center p-3 rounded-lg bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fab fa-facebook-f text-base ml-2"></i>
+                    <span class="text-sm font-semibold">صفحتنا على فيسبوك</span>
                 </a>
+                <!-- WhatsApp -->
                 <a href="https://wa.me/message/COHKEFFADO3KF1" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center justify-center p-4 rounded-xl bg-green-500 text-white shadow-lg hover:bg-green-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
-                    <i class="fab fa-whatsapp text-xl ml-3"></i>
-                    <span class="text-lg font-semibold">واتس اب: 0550341695</span>
+                   class="flex items-center justify-center p-3 rounded-lg bg-green-500 text-white shadow-md hover:bg-green-600 transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fab fa-whatsapp text-base ml-2"></i>
+                    <span class="text-sm font-semibold">واتساب: 0550341695</span>
                 </a>
+                <!-- Telegram -->
                 <a href="https://t.me/belarir3" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center justify-center p-4 rounded-xl bg-blue-400 text-white shadow-lg hover:bg-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
-                    <i class="fab fa-telegram-plane text-xl ml-3"></i>
-                    <span class="text-lg font-semibold">تيلغرام</span>
+                   class="flex items-center justify-center p-3 rounded-lg bg-blue-400 text-white shadow-md hover:bg-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fab fa-telegram-plane text-base ml-2"></i>
+                    <span class="text-sm font-semibold">تيلغرام</span>
                 </a>
+                <!-- Email -->
                 <a href="mailto:belarir3@gmail.com"
-                   class="flex items-center justify-center p-4 rounded-xl bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
-                    <i class="fas fa-envelope text-xl ml-3"></i>
-                    <span class="text-lg font-semibold">البريد الإلكتروني</span>
+                   class="flex items-center justify-center p-3 rounded-lg bg-orange-500 text-white shadow-md hover:bg-orange-600 transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-envelope text-base ml-2"></i>
+                    <span class="text-sm font-semibold">البريد الإلكتروني</span>
                 </a>
-                <a href="https://www.google.com/maps/place/Belarir+Library/@33.6841285,1.0022453,17z/data=!3m1!4b1!4m6!3m5!1s0x125134701234567:0x123456789abcdef!8m2!3d33.684124!4d1.0048202!16s/g/11vj_4q3y" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center justify-center p-4 rounded-xl bg-red-500 text-white shadow-lg hover:bg-red-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl col-span-1 md:col-span-2">
-                    <i class="fas fa-map-marker-alt text-xl ml-3"></i>
-                    <span class="text-lg font-semibold">الموقع على الخريطة</span>
+                <!-- Fax -->
+                <a href="tel:+21349621695"
+                   class="flex items-center justify-center p-3 rounded-lg bg-gray-600 text-white shadow-md hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-fax text-base ml-2"></i>
+                    <span class="text-sm font-semibold">فاكس: 049621695</span>
                 </a>
+                <!-- Location on Map - Now also in a single column within the grid -->
+                <a href="https://maps.app.goo.gl/TANeZj3nRegzztW39" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center p-3 rounded-lg bg-red-500 text-white shadow-md hover:bg-red-600 transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-map-marker-alt text-base ml-2"></i>
+                    <span class="text-sm font-semibold">الموقع على الخريطة</span>
+                </a>
+            </div>
+            <!-- Physical Address (remains in footer) -->
+        </section>
+    </main>
+
+    <!-- Main Content - Our Services Section -->
+    <main class="flex-grow flex items-center justify-center p-3">
+        <section id="services" class="flex flex-col w-full max-w-4xl bg-white p-6 rounded-2xl shadow-xl space-y-6 mt-6 mb-6">
+            <h3 class="text-3xl font-bold text-center text-blue-700 mb-6">خدماتنا</h3>
+            <p class="text-base sm:text-lg text-gray-700 mb-4">
+                نقدم لكم مجموعة واسعة من الخدمات لتلبية احتياجاتكم التعليمية والثقافية:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service: Printing and Copying Services -->
+                <div class="bg-blue-50 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-0.5">
+                    <i class="fas fa-print text-4xl text-purple-600 mb-3"></i>
+                    <h4 class="text-xl font-bold text-blue-800 mb-1.5">خدمات الطباعة والتصوير</h4>
+                    <p class="text-sm text-gray-700">نقدم خدمات طباعة المستندات وتصويرها بجودة عالية وبأسعار منافسة.</p>
+                </div>
+                <!-- Service: Electronic Registrations -->
+                <div class="bg-blue-50 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-0.5">
+                    <i class="fas fa-clipboard-check text-4xl text-teal-600 mb-3"></i>
+                    <h4 class="text-xl font-bold text-blue-800 mb-1.5">تسجيلات إلكترونية</h4>
+                    <p class="text-sm text-gray-700">نساعدكم في إنجاز مختلف التسجيلات والملفات الإدارية إلكترونياً.</p>
+                </div>
+                <!-- Service 1 -->
+                <div class="bg-blue-50 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-0.5">
+                    <i class="fas fa-book-open text-4xl text-blue-600 mb-3"></i>
+                    <h4 class="text-xl font-bold text-blue-800 mb-1.5">بيع الكتب المدرسية</h4>
+                    <p class="text-sm text-gray-700">نوفر جميع الكتب والمناهج المدرسية لمختلف المراحل التعليمية بأفضل الأسعار.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-blue-50 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-0.5">
+                    <i class="fas fa-pencil-ruler text-4xl text-green-600 mb-3"></i>
+                    <h4 class="text-xl font-bold text-blue-800 mb-1.5">لوازم مدرسية متنوعة</h4>
+                    <p class="text-sm text-gray-700">تجدون لدينا كل ما يحتاجه الطلاب من أقلام، دفاتر، أدوات هندسية، وغيرها.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-blue-50 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-0.5">
+                    <i class="fas fa-laptop-code text-4xl text-red-600 mb-3"></i>
+                    <h4 class="text-xl font-bold text-blue-800 mb-1.5">مستلزمات مكتبية</h4>
+                    <p class="text-sm text-gray-700">تتوفر لدينا تشكيلة واسعة من المستلزمات المكتبية التي تناسب الأفراد والشركات.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-blue-50 p-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-0.5">
+                    <i class="fas fa-book text-4xl text-yellow-600 mb-3"></i>
+                    <h4 class="text-xl font-bold text-blue-800 mb-1.5">روايات وقصص</h4>
+                    <p class="text-sm text-gray-700">مجموعة مختارة من الروايات والقصص العربية والعالمية لمحبي القراءة.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-blue-800 text-white py-8 mt-auto">
-        <div class="container mx-auto text-center px-4">
-            <p class="text-lg mb-4">
+    <!-- Main Content - Electronic Services Section -->
+    <main class="flex-grow flex items-center justify-center p-3">
+        <section id="e-services" class="flex flex-col w-full max-w-4xl bg-white p-6 rounded-2xl shadow-xl space-y-6 mt-6 mb-6">
+            <h3 class="text-3xl font-bold text-center text-blue-700 mb-6">خدماتنا الإلكترونية</h3>
+            <p class="text-base sm:text-lg text-gray-700 mb-4">
+                نقدم لكم مجموعة واسعة من الخدمات الإلكترونية، تشمل:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-right">
+                <!-- Service: Flexy and Recharge Cards -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-mobile-alt text-2xl text-purple-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">خدمة الفليكسي وبطاقات التعبئة لكل الشبكات.</p>
+                </div>
+                <!-- Service: University Registrations -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-university text-2xl text-green-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">التسجيلات الجامعية بمختلف أنواعها.</p>
+                </div>
+                <!-- Service: Unemployment Grant Renewal -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-wallet text-2xl text-yellow-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">تجديد منحة البطالة.</p>
+                </div>
+                <!-- Service: Electronic Payments for Fees and Bills -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-credit-card text-2xl text-red-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">دفع الرسوم والفواتير إلكترونياً.</p>
+                </div>
+                <!-- Service: Student Registrations -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-user-graduate text-2xl text-blue-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">تسجيل التلاميذ في جميع الأطوار الدراسية.</p>
+                </div>
+                <!-- Service: School and University Research Preparation -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-file-alt text-2xl text-orange-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">إعداد وكتابة البحوث المدرسية والجامعية.</p>
+                </div>
+                <!-- Service: Professional CV Writing -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-address-card text-2xl text-teal-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">كتابة السيرة الذاتية باحترافية.</p>
+                </div>
+                <!-- Service: Administrative Document Extraction and Filling -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-file-export text-2xl text-indigo-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">استخراج وملء الوثائق الإدارية.</p>
+                </div>
+                <!-- Service: Electronic Payments for various services -->
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <i class="fas fa-money-check-alt text-2xl text-brown-600 ml-3"></i>
+                    <p class="text-sm text-gray-800">الدفع الإلكتروني لمختلف الخدمات.</p>
+                </div>
+            </div>
+            <p class="text-base sm:text-lg text-gray-700 mt-6">
+                🎯 هدفنا هو تسهيل الإجراءات وتوفير الوقت والجهد لزبائننا من خلال خدمات سريعة ودقيقة.
+            </p>
+        </section>
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-800 text-white py-6 mt-auto">
+        <div class="container mx-auto text-center px-3">
+            <p class="text-base mb-2">
                 © 2026 مكتبة بلعرير. جميع الحقوق محفوظة.
             </p>
-            <div class="flex justify-center space-x-6 text-2xl rtl:space-x-reverse">
+            <!-- Physical Address - MOVED HERE AND CENTERED -->
+            <div class="text-center mb-4">
+                <p class="text-base font-bold text-white mb-1">
+                    <i class="fas fa-location-dot text-blue-200 ml-1"></i>العنوان:
+                </p>
+                <p class="text-sm text-blue-100">
+                    حي 05 جويلية خلاف بريزينة ولاية البيض
+                </p>
+            </div>
+            <!-- Social Media Icons in Footer - Rearranged -->
+            <div class="flex justify-center space-x-4 text-xl rtl:space-x-reverse">
                 <a href="https://www.facebook.com/share/16n8Utr2QZ/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-200 transition-colors duration-300">
                     <i class="fab fa-facebook"></i>
                 </a>
